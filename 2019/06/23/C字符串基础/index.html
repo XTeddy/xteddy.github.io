@@ -819,17 +819,17 @@
   function renderGitment() {
     var gitment = new Gitmint({
       id: window.location.pathname,
-      owner: 'XTeddy# MUST HAVE, Your Github Username',
-      repo: 'BlogComment# MUST HAVE, The name of the repo you use to store Gitment comments',
+      owner: 'XTeddy',
+      repo: 'BlogComment',
       
         lang: '' || navigator.language || navigator.systemLanguage || navigator.userLanguage,
       
       oauth: {
       
       
-        client_secret: '9c97c3d69651393e0cf83bb3fa9a2004cf167fe5# EITHER this or proxy_gateway, Github access secret token for the Gitment',
+        client_secret: '9c97c3d69651393e0cf83bb3fa9a2004cf167fe5',
       
-        client_id: '58bcb8671b84acf6cf17# MUST HAVE, Github client id for the Gitment'
+        client_id: '58bcb8671b84acf6cf17'
       }
     });
     gitment.render('gitment-container');
