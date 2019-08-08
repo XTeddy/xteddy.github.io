@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[printf()与scanf()函数转换说明]]></title>
+    <url>%2F2019%2F06%2F24%2Fcjx9qu4ui0007c0b99w8nug33%2F</url>
+    <content type="text"><![CDATA[printf():用printf()打印数值时，可能希望能控制输出长度以及精度，就需要合理使用转换说明。 注：下面输出中一个*代表一个空格 整型(int num = 222) 输出原始值：printf(&quot;num=%d&quot;,num);，输出：num=222 输出固定长度：printf(&quot;num=%2d&quot;,num); //输出至少占用2个字符。，输出：num=222printf(&quot;num=%6d&quot;,num); //输出至少占用6个字符。，输出：num=***222 浮点型(float num = 22.1) 输出原始值：printf(&quot;num=%f&quot;,num);，输出：num=22.100000 输出固定长度：printf(&quot;num=%7.3&quot;,num);，输出：num=*22.100]]></content>
+      <categories>
+        <category>C</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[C常量]]></title>
-    <url>%2F2019%2F06%2F23%2Fcjx8zpj6400024wb9v3xg0wmo%2F</url>
+    <url>%2F2019%2F06%2F23%2Fcjx9qu4ug0005c0b91f263iaa%2F</url>
     <content type="text"><![CDATA[C中用指令#define指令定义常量，常量类型可以为整型、浮点、字符和字符串： 1234#define NUM 3#define NUM 3.235#define CHA &apos;A&apos;#define STR &quot;How are you?&quot; 注意：#define没有结尾符; 也可以用const限定符限变量，限定后的变量为只读，不能更改，也相当于常量： const int NUM = 12;]]></content>
       <categories>
         <category>C</category>
@@ -10,7 +18,7 @@
   </entry>
   <entry>
     <title><![CDATA[C字符串基础]]></title>
-    <url>%2F2019%2F06%2F23%2Fcjx8zpj5v00004wb9cej3x3th%2F</url>
+    <url>%2F2019%2F06%2F23%2Fcjx9qu4u30000c0b9jbh33k0y%2F</url>
     <content type="text"><![CDATA[C没有字符串类型，用字符数组存储字符串, 如：char name[40] ,用 40 个存储单元存储字符串，每个单元存一个字符。 第 40 个存储单元存储 ASCII 空字符 \0，所以只能存 39 个字符，C 字符串以空字符结束。 scanf() 函数用 %s 读取字符串，读取到第一个空白处不再读取，如输入：Bob Alice，只读取 Bob 字符串。 strlen() 函数计算字符串长度，不包括空字符。 sizeof() 计算字符串空间时包含了空字符。 例： 12345678910#include&lt;stdio.h&gt;#include&lt;string.h&gt;#define PRAISE &quot;You are an extraordinary being.&quot;int main(void)&#123; printf(&quot;The phrase of praise has %zd letters,\n&quot;, strlen(PRAISE)); printf(&quot;And occupies %zd memory cells.\n&quot;, sizeof(PRAISE)); return 0;&#125; 输出： The phrase of praise has 31 letters,and occupies 32 memory cells.]]></content>
       <categories>
         <category>C</category>
@@ -18,7 +26,7 @@
   </entry>
   <entry>
     <title><![CDATA[Vim按键记录]]></title>
-    <url>%2F2019%2F06%2F23%2Fcjx8zpj6a00054wb9zch9g6ko%2F</url>
+    <url>%2F2019%2F06%2F23%2Fcjx9qu4ua0002c0b934hyxmen%2F</url>
     <content type="text"><![CDATA[光标移动方向：h「←」、j「↓」、k「↑」、l「→」 ESC 「命令模式」: 「底行模式」 i 「光标前插入」I 「该行行首不是 blank 的位置处插入」a 「光标后插入」A 「在该行行尾插入」 o 「光标后一行插入」O 「光标前一行插入」 0 「移到行首」^ 「移到行首不是 blank 的位置」$ 「移到行尾」g_ 「移到行尾不是 blank 的位置」gg 「移到第一行」G 「移到最后一行」nG 「移到第 n 行」:n 「移到第 n 行」 x 「删除光标位置字符」X 「删除光标位置前一个字符」 r 「替换光标位置字符，不进入插入模式」s 「替换光标位置字符，先删除字符，再进入插入模式等用户输入」 d [删除并复制]dd [删除光标所在行] u [撤销]Ctrl-r [取消撤销] v [可视化选择]]]></content>
       <categories>
         <category>编程技巧</category>
