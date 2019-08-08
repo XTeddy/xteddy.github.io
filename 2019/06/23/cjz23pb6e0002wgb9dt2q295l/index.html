@@ -94,18 +94,18 @@
 
 
 
-  <meta name="description" content="C没有字符串类型，用字符数组存储字符串, 如：char name[40] ,用 40 个存储单元存储字符串，每个单元存一个字符。 第 40 个存储单元存储 ASCII 空字符 \0，所以只能存 39 个字符，C 字符串以空字符结束。 scanf() 函数用 %s 读取字符串，读取到第一个空白处不再读取，如输入：Bob Alice，只读取 Bob 字符串。 strlen() 函数计算字符串长度，不包">
-<meta name="keywords" content="c语言 bdongs 博客 信息安全">
+  <meta name="description" content="C中用指令#define指令定义常量，常量类型可以为整型、浮点、字符和字符串： 1234#define NUM 3#define NUM 3.235#define CHA &amp;apos;A&amp;apos;#define STR &amp;quot;How are you?&amp;quot;  注意：#define没有结尾符; 也可以用const限定符限变量，限定后的变量为只读，不能更改，也相当于常量： const i">
+<meta name="keywords" content="c语言,,编程,bdongs,个人博客,信息安全">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C字符串基础">
-<meta property="og:url" content="http://yoursite.com/2019/06/23/cjx8zpj5v00004wb9cej3x3th/index.html">
+<meta property="og:title" content="C常量">
+<meta property="og:url" content="http://bdongs.com/2019/06/23/cjz23pb6e0002wgb9dt2q295l/index.html">
 <meta property="og:site_name" content="bdongs">
-<meta property="og:description" content="C没有字符串类型，用字符数组存储字符串, 如：char name[40] ,用 40 个存储单元存储字符串，每个单元存一个字符。 第 40 个存储单元存储 ASCII 空字符 \0，所以只能存 39 个字符，C 字符串以空字符结束。 scanf() 函数用 %s 读取字符串，读取到第一个空白处不再读取，如输入：Bob Alice，只读取 Bob 字符串。 strlen() 函数计算字符串长度，不包">
+<meta property="og:description" content="C中用指令#define指令定义常量，常量类型可以为整型、浮点、字符和字符串： 1234#define NUM 3#define NUM 3.235#define CHA &amp;apos;A&amp;apos;#define STR &amp;quot;How are you?&amp;quot;  注意：#define没有结尾符; 也可以用const限定符限变量，限定后的变量为只读，不能更改，也相当于常量： const i">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-23T02:28:08.738Z">
+<meta property="og:updated_time" content="2019-06-23T13:39:10.538Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C字符串基础">
-<meta name="twitter:description" content="C没有字符串类型，用字符数组存储字符串, 如：char name[40] ,用 40 个存储单元存储字符串，每个单元存一个字符。 第 40 个存储单元存储 ASCII 空字符 \0，所以只能存 39 个字符，C 字符串以空字符结束。 scanf() 函数用 %s 读取字符串，读取到第一个空白处不再读取，如输入：Bob Alice，只读取 Bob 字符串。 strlen() 函数计算字符串长度，不包">
+<meta name="twitter:title" content="C常量">
+<meta name="twitter:description" content="C中用指令#define指令定义常量，常量类型可以为整型、浮点、字符和字符串： 1234#define NUM 3#define NUM 3.235#define CHA &amp;apos;A&amp;apos;#define STR &amp;quot;How are you?&amp;quot;  注意：#define没有结尾符; 也可以用const限定符限变量，限定后的变量为只读，不能更改，也相当于常量： const i">
 
 
 
@@ -113,7 +113,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/23/cjx8zpj5v00004wb9cej3x3th/">
+  <link rel="canonical" href="http://bdongs.com/2019/06/23/cjz23pb6e0002wgb9dt2q295l/">
 
 
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>C字符串基础 | bdongs</title>
+  <title>C常量 | bdongs</title>
   
 
 
@@ -188,7 +188,7 @@
     </div>
     
       
-        <p class="site-subtitle">英语、游泳爱好者</p>
+        <p class="site-subtitle">英语爱好者</p>
       
     
     
@@ -355,7 +355,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/23/cjx8zpj5v00004wb9cej3x3th/">
+    <link itemprop="mainEntityOfPage" href="http://bdongs.com/2019/06/23/cjz23pb6e0002wgb9dt2q295l/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="bdongs">
@@ -372,7 +372,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C字符串基础
+          <h1 class="post-title" itemprop="name headline">C常量
 
               
             
@@ -398,7 +398,7 @@
                 
               
 
-              <time title="创建时间：2019-06-23 10:20:08 / 修改时间：10:28:08" itemprop="dateCreated datePublished" datetime="2019-06-23T10:20:08+08:00">2019-06-23</time>
+              <time title="创建时间：2019-06-23 21:16:49 / 修改时间：21:39:10" itemprop="dateCreated datePublished" datetime="2019-06-23T21:16:49+08:00">2019-06-23</time>
             
 
             
@@ -431,19 +431,6 @@
           
             
             
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/06/23/cjx8zpj5v00004wb9cej3x3th/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/06/23/cjx8zpj5v00004wb9cej3x3th/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -468,19 +455,12 @@
       
 
       
-        <p>C没有字符串类型，用字符数组存储字符串,</p>
-<p>如：char name[40] ,用 40 个存储单元存储字符串，每个单元存一个字符。</p>
-<p>第 40 个存储单元存储 ASCII 空字符 \0，所以只能存 39 个字符，C 字符串以空字符结束。</p>
-<p>scanf() 函数用 %s 读取字符串，读取到第一个空白处不再读取，如输入：Bob Alice，只读取 Bob 字符串。</p>
-<p>strlen() 函数计算字符串长度，不包括空字符。</p>
-<p>sizeof() 计算字符串空间时包含了空字符。</p>
-<p>例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;string.h&gt;</span><br><span class="line">#define PRAISE &quot;You are an extraordinary being.&quot;</span><br><span class="line"></span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;The phrase of praise has %zd letters,\n&quot;, strlen(PRAISE));</span><br><span class="line">	printf(&quot;And occupies %zd memory cells.\n&quot;, sizeof(PRAISE));</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>C中用指令<code>#define</code>指令定义常量，常量类型可以为整型、浮点、字符和字符串：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#define NUM 3</span><br><span class="line">#define NUM 3.235</span><br><span class="line">#define CHA &apos;A&apos;</span><br><span class="line">#define STR &quot;How are you?&quot;</span><br></pre></td></tr></table></figure>
 
-<p>输出：</p>
-<blockquote>
-<p>The phrase of praise has 31 letters,<br>and occupies 32 memory cells.</p>
-</blockquote>
+<p><strong>注意</strong>：<code>#define</code>没有结尾符<code>;</code></p>
+<p>也可以用<code>const</code>限定符限变量，限定后的变量为只读，不能更改，也相当于常量：</p>
+<p><code>const int NUM = 12;</code></p>
 
       
     </div>
@@ -511,8 +491,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/23/cjx8zpj6a00054wb9zch9g6ko/" rel="next" title="Vim按键记录">
-                <i class="fa fa-chevron-left"></i> Vim按键记录
+              <a href="/2019/06/23/cjz23pb660000wgb9661yr0n9/" rel="next" title="C字符串基础">
+                <i class="fa fa-chevron-left"></i> C字符串基础
               </a>
             
           </div>
@@ -521,8 +501,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/23/cjx8zpj6400024wb9v3xg0wmo/" rel="prev" title="C常量">
-                C常量 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/06/24/cjz23pb6p0007wgb93hnr8qud/" rel="prev" title="printf()与scanf()函数转换说明">
+                printf()与scanf()函数转换说明 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -546,10 +526,7 @@
           
 
   
-    <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
+    <div class="comments" id="gitalk-container">
     </div>
 
   
@@ -592,7 +569,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -667,7 +644,11 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://blog.chenr.cn" title="http://blog.chenr.cn" rel="noopener" target="_blank">Chen's blog</a>
+                    <a href="http://blog.chenr.cn" title="http://blog.chenr.cn" rel="noopener" target="_blank">Chen</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://siriyxr.github.io" title="https://siriyxr.github.io" rel="noopener" target="_blank">SiriBlog</a>
                   </li>
                 
               </ul>
@@ -840,37 +821,32 @@
 
 
   
-    <!-- LOCAL: You can save these files to your site and update links -->
+    
 
-  
-  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitmint.browser.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
-<!-- END LOCAL -->
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
 
 <script>
-  function renderGitment() {
-    var gitment = new Gitmint({
-      id: window.location.pathname,
-      owner: 'XTeddy',
-      repo: 'BlogComment',
-      
-        lang: '' || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-      
-      oauth: {
-      
-      
-        client_secret: '9c97c3d69651393e0cf83bb3fa9a2004cf167fe5',
-      
-        client_id: '58bcb8671b84acf6cf17'
-      }
-    });
-    gitment.render('gitment-container');
-  }
-
-  
-    renderGitment();
-  
+  var gitalk = new Gitalk({
+    clientID: '58bcb8671b84acf6cf17',
+    clientSecret: '9c97c3d69651393e0cf83bb3fa9a2004cf167fe5',
+    repo: 'BlogComment',
+    owner: 'XTeddy',
+    admin: ['XTeddy'],
+    id: md5(location.pathname),
+    
+      language: window.navigator.language || window.navigator.userLanguage,
+    
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
 </script>
 
   

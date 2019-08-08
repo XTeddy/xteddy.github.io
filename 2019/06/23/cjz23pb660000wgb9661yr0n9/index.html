@@ -98,7 +98,7 @@
 <meta name="keywords" content="c语言,,编程,bdongs,个人博客,信息安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C字符串基础">
-<meta property="og:url" content="http://bdongs.com/2019/06/23/cjx9qu4u30000c0b9jbh33k0y/index.html">
+<meta property="og:url" content="http://bdongs.com/2019/06/23/cjz23pb660000wgb9661yr0n9/index.html">
 <meta property="og:site_name" content="bdongs">
 <meta property="og:description" content="C没有字符串类型，用字符数组存储字符串, 如：char name[40] ,用 40 个存储单元存储字符串，每个单元存一个字符。 第 40 个存储单元存储 ASCII 空字符 \0，所以只能存 39 个字符，C 字符串以空字符结束。 scanf() 函数用 %s 读取字符串，读取到第一个空白处不再读取，如输入：Bob Alice，只读取 Bob 字符串。 strlen() 函数计算字符串长度，不包">
 <meta property="og:locale" content="zh-CN">
@@ -113,7 +113,7 @@
 
   
   
-  <link rel="canonical" href="http://bdongs.com/2019/06/23/cjx9qu4u30000c0b9jbh33k0y/">
+  <link rel="canonical" href="http://bdongs.com/2019/06/23/cjz23pb660000wgb9661yr0n9/">
 
 
 
@@ -355,7 +355,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://bdongs.com/2019/06/23/cjx9qu4u30000c0b9jbh33k0y/">
+    <link itemprop="mainEntityOfPage" href="http://bdongs.com/2019/06/23/cjz23pb660000wgb9661yr0n9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="bdongs">
@@ -431,19 +431,6 @@
           
             
             
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/06/23/cjx9qu4u30000c0b9jbh33k0y/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/06/23/cjx9qu4u30000c0b9jbh33k0y/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -511,7 +498,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/23/cjx9qu4ua0002c0b934hyxmen/" rel="next" title="Vim按键记录">
+              <a href="/2019/06/23/cjz23pb6n0005wgb926m9b407/" rel="next" title="Vim按键记录">
                 <i class="fa fa-chevron-left"></i> Vim按键记录
               </a>
             
@@ -521,7 +508,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/23/cjx9qu4ug0005c0b91f263iaa/" rel="prev" title="C常量">
+              <a href="/2019/06/23/cjz23pb6e0002wgb9dt2q295l/" rel="prev" title="C常量">
                 C常量 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -546,10 +533,7 @@
           
 
   
-    <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
+    <div class="comments" id="gitalk-container">
     </div>
 
   
@@ -844,37 +828,32 @@
 
 
   
-    <!-- LOCAL: You can save these files to your site and update links -->
+    
 
-  
-  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitmint.browser.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
-<!-- END LOCAL -->
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
 
 <script>
-  function renderGitment() {
-    var gitment = new Gitmint({
-      id: window.location.pathname,
-      owner: 'XTeddy',
-      repo: 'BlogComment',
-      
-        lang: '' || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-      
-      oauth: {
-      
-      
-        client_secret: '9c97c3d69651393e0cf83bb3fa9a2004cf167fe5',
-      
-        client_id: '58bcb8671b84acf6cf17'
-      }
-    });
-    gitment.render('gitment-container');
-  }
-
-  
-    renderGitment();
-  
+  var gitalk = new Gitalk({
+    clientID: '58bcb8671b84acf6cf17',
+    clientSecret: '9c97c3d69651393e0cf83bb3fa9a2004cf167fe5',
+    repo: 'BlogComment',
+    owner: 'XTeddy',
+    admin: ['XTeddy'],
+    id: md5(location.pathname),
+    
+      language: window.navigator.language || window.navigator.userLanguage,
+    
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
 </script>
 
   
