@@ -11,7 +11,7 @@
   <entry>
     <title><![CDATA[C常量]]></title>
     <url>%2F2019%2F06%2F23%2Fc%E5%B8%B8%E9%87%8F%2F</url>
-    <content type="text"><![CDATA[C中用指令#define指令定义常量，常量类型可以为整型、浮点、字符和字符串： 1234#define NUM 3#define NUM 3.235#define CHA &apos;A&apos;#define STR &quot;How are you?&quot; 注意：#define没有结尾符; 也可以用const限定符限变量，限定后的变量为只读，不能更改，也相当于常量： const int NUM = 12;]]></content>
+    <content type="text"><![CDATA[C中用指令#define指令定义常量，常量类型可以为整型、浮点、字符和字符串： 1234#define NUM 3#define NUM 3.235#define CHA &apos;A&apos;#define STR &quot;How are you?&quot; 注意：#define没有结尾符; 也可以用const限定符限变量，限定后的变量为只读，不能更改，也相当于常量： const int NUM = 12; C中用指令#define指令定义常量，常量类型可以为整型、浮点、字符和字符串：``` #define NUM 3 #define NUM 3.235 #define CHA ‘A’ #define STR “How are you?”]]></content>
       <categories>
         <category>C</category>
       </categories>
