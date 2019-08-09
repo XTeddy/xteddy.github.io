@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[printf()与scanf()函数转换说明]]></title>
-    <url>%2F2019%2F06%2F24%2Fprintf-%E4%B8%8Escanf-%E5%87%BD%E6%95%B0%E8%BD%AC%E6%8D%A2%E8%AF%B4%E6%98%8E%2F</url>
-    <content type="text"><![CDATA[printf():用printf()打印数值时，可能希望能控制输出长度以及精度，就需要合理使用转换说明。 注：下面输出中一个*代表一个空格 整型(int num = 222) 输出原始值：printf(&quot;num=%d&quot;,num);，输出：num=222 输出固定长度：printf(&quot;num=%2d&quot;,num); //输出至少占用2个字符。，输出：num=222printf(&quot;num=%6d&quot;,num); //输出至少占用6个字符。，输出：num=***222 浮点型(float num = 22.1) 输出原始值：printf(&quot;num=%f&quot;,num);，输出：num=22.100000 输出固定长度：printf(&quot;num=%7.3&quot;,num);，输出：num=*22.100]]></content>
+    <title><![CDATA[Markdown常用命令更新]]></title>
+    <url>%2F2019%2F08%2F09%2Fmarkdown%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%9B%B4%E6%96%B0%2F</url>
+    <content type="text"><![CDATA[1. 块级元素1.1 标题① 两个或两个以上 = 字符显示为一级标题： 这是一级标题== 显示效果： ② 两个或两个以上 - 显示为二级标题： 这是二级标题-- 显示效果： ③ 1~6级标题可用 # 个数对应： \# 一级标题\## 两级标题\### 三级标题\#### 四级标题... 显示效果： 1.2 强制换行行尾添加至少两个空格+回车，则段落被强制换行。 1.3 块引用① &gt; 符号表示块引用： \&gt; 这是一个块引用吗？\&gt; 是的！ 显示效果： 这是一个块引用吗？是的！ 1.4 列表（有序和无序）：① 有序列表：阿拉伯数字+英文句号.+空格： 1. 有序列表12. 有序列表23. 有序列表3 显示效果： 1. 有序列表12. 有序列表23. 有序列表3 ② 无序列表：*，连字符-或+号 + 空格： \* 无序列表\- 无序列表\+ 无序列表 显示效果： • 无序列表• 无序列表• 无序列表 1.5 代码块：① 段落后隔行缩进四个空格或一个水平制表符 ② 列表后缩进八个空格或两个水平制表符： 1.6 水平线：一行中有三个或三个以上的 * , - , _ 时，形成水平线： \***\---\___ 显示效果： 2. 内联元素2.1 链接方式（内联和引用）① 内联： 这是我的博客地址：\[点击访问](https://bdongs.com &quot;bdongs&quot;)。这是我的博客地址：&lt;https://bdongs.com/&gt; 显示效果： 这是我的博客地址：点击访问。 这是我的博客地址：https://bdongs.com/ ② 引用： 这是我的博客地址：[点击访问][id][id]: https://bdongs.com //可在文章任意位置且单独占一行 这是我的博客地址：[点击访问][][点击访问]: https://bdongs.com //可在文章任意位置且单独占一行 显示效果： 这是我的博客地址：[点击访问][id][id]: https://bdongs.com 这是我的博客地址：[点击访问][][点击访问]: https://bdongs.com 2.2 强调① 斜体： *这是斜体* 显示效果： 这是斜体 ②粗体： **这是粗体** 显示效果： 这是粗体 2.3 代码①多个`: ```#include &lt;stdio.h&gt;int main(){ printf(“Hello, World! \n”); return 0; } ``` 显示效果： 1234567 #include &lt;stdio.h&gt; int main() &#123; printf(&quot;Hello, World! \n&quot;); return 0; &#125; ②单个`: `printf(“Hello, World! \n”);` 显示效果：printf(&quot;Hello, World! \n&quot;); 2.3 图片内联： ![alt属性](图片地址)![bdongs](http://t.cn/AiT05qaf) 显示效果：]]></content>
       <categories>
-        <category>C</category>
+        <category>技术</category>
+        <category>Markdown</category>
       </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[C常量]]></title>
-    <url>%2F2019%2F06%2F23%2Fc%E5%B8%B8%E9%87%8F%2F</url>
-    <content type="text"><![CDATA[C中用指令#define指令定义常量，常量类型可以为整型、浮点、字符和字符串： 1234#define NUM 3#define NUM 3.235#define CHA &apos;A&apos;#define STR &quot;How are you?&quot; 注意：#define没有结尾符; 也可以用const限定符限变量，限定后的变量为只读，不能更改，也相当于常量： const int NUM = 12; C中用指令#define指令定义常量，常量类型可以为整型、浮点、字符和字符串：``` #define NUM 3 #define NUM 3.235 #define CHA ‘A’ #define STR “How are you?”]]></content>
-      <categories>
-        <category>C</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[C字符串基础]]></title>
-    <url>%2F2019%2F06%2F23%2Fc%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80%2F</url>
-    <content type="text"><![CDATA[C没有字符串类型，用字符数组存储字符串, 如：char name[40] ,用 40 个存储单元存储字符串，每个单元存一个字符。 第 40 个存储单元存储 ASCII 空字符 \0，所以只能存 39 个字符，C 字符串以空字符结束。 scanf() 函数用 %s 读取字符串，读取到第一个空白处不再读取，如输入：Bob Alice，只读取 Bob 字符串。 strlen() 函数计算字符串长度，不包括空字符。 sizeof() 计算字符串空间时包含了空字符。 例： 12345678910#include&lt;stdio.h&gt;#include&lt;string.h&gt;#define PRAISE &quot;You are an extraordinary being.&quot;int main(void)&#123; printf(&quot;The phrase of praise has %zd letters,\n&quot;, strlen(PRAISE)); printf(&quot;And occupies %zd memory cells.\n&quot;, sizeof(PRAISE)); return 0;&#125; 输出： The phrase of praise has 31 letters,and occupies 32 memory cells.]]></content>
-      <categories>
-        <category>C</category>
-      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>编程技巧</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Vim按键记录]]></title>
