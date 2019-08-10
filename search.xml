@@ -1,24 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[A private conversation]]></title>
+    <url>%2F2019%2F08%2F09%2Fa-private-conversation%2F</url>
+    <content type="text"><![CDATA[新概念英语第二册第一课。 课文A private conversationLast week I went to the theatre. I had a very good seat. The play was very interesting. I did not enjoy it. A young man and A young woman were sitting behind me. They were talking loudly. I got very angry. I could not hear the actors. I turned round. I looked at the man and the woman angrily. They did not pay any attention. In the end, I could not bear it. I turned round again. ‘I can’t hear a word!’,I said angrily. ‘It’s none of your business!’,the young man said rudely.’This is a private conversation!’]]></content>
+      <categories>
+        <category>英语</category>
+        <category>新概念</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>语法</tag>
+        <tag>单词</tag>
+        <tag>场景课文</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Markdown常用命令更新]]></title>
     <url>%2F2019%2F08%2F09%2Fmarkdown%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%9B%B4%E6%96%B0%2F</url>
-    <content type="text"><![CDATA[1. 块级元素1.1 标题① 两个或两个以上 = 字符显示为一级标题： 这是一级标题== 显示效果： ② 两个或两个以上 - 显示为二级标题： 这是二级标题-- 显示效果： ③ 1~6级标题可用 # 个数对应： \# 一级标题\## 两级标题\### 三级标题\#### 四级标题... 显示效果： 1.2 强制换行行尾添加至少两个空格+回车，则段落被强制换行。 1.3 块引用① &gt; 符号表示块引用： \&gt; 这是一个块引用吗？\&gt; 是的！ 显示效果： 这是一个块引用吗？是的！ 1.4 列表（有序和无序）① 有序列表：阿拉伯数字+英文句号.+空格： 1. 有序列表12. 有序列表23. 有序列表3 显示效果： 1. 有序列表12. 有序列表23. 有序列表3 ② 无序列表：*，连字符-或+号 + 空格： \* 无序列表\- 无序列表\+ 无序列表 显示效果： • 无序列表• 无序列表• 无序列表 1.5 代码块① 段落后隔行缩进四个空格或一个水平制表符 ② 列表后缩进八个空格或两个水平制表符： 1.6 水平线一行中有三个或三个以上的 * , - , _ 时，形成水平线： \***\---\___ 显示效果： 2. 内联元素2.1 链接方式（内联和引用）① 内联： 这是我的博客地址：\[点击访问](https://bdongs.com &quot;bdongs&quot;)。这是我的博客地址：&lt;https://bdongs.com/&gt; 显示效果： 这是我的博客地址：点击访问。 这是我的博客地址：https://bdongs.com/ ② 引用： 这是我的博客地址：[点击访问][id][id]: https://bdongs.com //可在文章任意位置且单独占一行 这是我的博客地址：[点击访问][][点击访问]: https://bdongs.com //可在文章任意位置且单独占一行 显示效果： 这是我的博客地址：[点击访问][id][id]: https://bdongs.com 这是我的博客地址：[点击访问][][点击访问]: https://bdongs.com 2.2 强调① 斜体： *这是斜体* 显示效果： 这是斜体 ②粗体： **这是粗体** 显示效果： 这是粗体 2.3 代码①多个`: ```#include &lt;stdio.h&gt;int main(){ printf(“Hello, World! \n”); return 0; } ``` 显示效果： 1234567 #include &lt;stdio.h&gt; int main() &#123; printf(&quot;Hello, World! \n&quot;); return 0; &#125; ②单个`: `printf(“Hello, World! \n”);` 显示效果：printf(&quot;Hello, World! \n&quot;); 2.3 图片内联： ![alt属性](图片地址)![bdongs](http://t.cn/AiT05qaf) 显示效果：]]></content>
+    <content type="text"><![CDATA[Markdonw常用命令整理。 1. 块级元素1.1 标题① 两个或两个以上 = 字符显示为一级标题： 这是一级标题== 显示效果： ② 两个或两个以上 - 显示为二级标题： 这是二级标题-- 显示效果： ③ 1~6级标题可用 # 个数对应： \# 一级标题\## 两级标题\### 三级标题\#### 四级标题... 显示效果： 1.2 强制换行行尾添加至少两个空格+回车，则段落被强制换行。 1.3 块引用① &gt; 符号表示块引用： \&gt; 这是一个块引用吗？\&gt; 是的！ 显示效果： 这是一个块引用吗？是的！ 1.4 列表（有序和无序）① 有序列表：阿拉伯数字+英文句号.+空格： 1. 有序列表12. 有序列表23. 有序列表3 显示效果： 1. 有序列表12. 有序列表23. 有序列表3 ② 无序列表：*，连字符-或+号 + 空格： \* 无序列表\- 无序列表\+ 无序列表 显示效果： • 无序列表• 无序列表• 无序列表 1.5 代码块① 段落后隔行缩进四个空格或一个水平制表符 ② 列表后缩进八个空格或两个水平制表符： 1.6 水平线一行中有三个或三个以上的 * , - , _ 时，形成水平线： \***\---\___ 显示效果： 2. 内联元素2.1 链接方式（内联和引用）① 内联： 这是我的博客地址：\[点击访问](https://bdongs.com &quot;bdongs&quot;)。这是我的博客地址：&lt;https://bdongs.com/&gt; 显示效果： 这是我的博客地址：点击访问。 这是我的博客地址：https://bdongs.com/ ② 引用： 这是我的博客地址：[点击访问][id][id]: https://bdongs.com //可在文章任意位置且单独占一行 这是我的博客地址：[点击访问][][点击访问]: https://bdongs.com //可在文章任意位置且单独占一行 显示效果： 这是我的博客地址：[点击访问][id][id]: https://bdongs.com 这是我的博客地址：[点击访问][][点击访问]: https://bdongs.com 2.2 强调① 斜体： *这是斜体* 显示效果： 这是斜体 ②粗体： **这是粗体** 显示效果： 这是粗体 2.3 代码①多个`: ```#include &lt;stdio.h&gt;int main(){ printf(“Hello, World! \n”); return 0; } ``` 显示效果： 1234567 #include &lt;stdio.h&gt; int main() &#123; printf(&quot;Hello, World! \n&quot;); return 0; &#125; ②单个`: `printf(“Hello, World! \n”);` 显示效果：printf(&quot;Hello, World! \n&quot;); 2.3 图片内联： ![alt属性](图片地址)![bdongs](http://t.cn/AiT05qaf) 显示效果：]]></content>
       <categories>
         <category>技术</category>
         <category>Markdown</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
+        <tag>编程工具</tag>
         <tag>编程技巧</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Vim按键记录]]></title>
     <url>%2F2019%2F06%2F23%2Fvim%E6%8C%89%E9%94%AE%E8%AE%B0%E5%BD%95%2F</url>
-    <content type="text"><![CDATA[光标移动方向：h「←」、j「↓」、k「↑」、l「→」 ESC 「命令模式」: 「底行模式」 i 「光标前插入」I 「该行行首不是 blank 的位置处插入」a 「光标后插入」A 「在该行行尾插入」 o 「光标后一行插入」O 「光标前一行插入」 0 「移到行首」^ 「移到行首不是 blank 的位置」$ 「移到行尾」g_ 「移到行尾不是 blank 的位置」gg 「移到第一行」G 「移到最后一行」nG 「移到第 n 行」:n 「移到第 n 行」 x 「删除光标位置字符」X 「删除光标位置前一个字符」 r 「替换光标位置字符，不进入插入模式」s 「替换光标位置字符，先删除字符，再进入插入模式等用户输入」 d [删除并复制]dd [删除光标所在行] u [撤销]Ctrl-r [取消撤销] v [可视化选择]]]></content>
+    <content type="text"><![CDATA[平时常用的一些 VIM 命令。 光标移动方向：h「←」、j「↓」、k「↑」、l「→」 ESC 「命令模式」: 「底行模式」 i 「光标前插入」I 「该行行首不是 blank 的位置处插入」a 「光标后插入」A 「在该行行尾插入」 o 「光标后一行插入」O 「光标前一行插入」 0 「移到行首」^ 「移到行首不是 blank 的位置」$ 「移到行尾」g_ 「移到行尾不是 blank 的位置」gg 「移到第一行」G 「移到最后一行」nG 「移到第 n 行」:n 「移到第 n 行」 x 「删除光标位置字符」X 「删除光标位置前一个字符」 r 「替换光标位置字符，不进入插入模式」s 「替换光标位置字符，先删除字符，再进入插入模式等用户输入」 d [删除并复制]dd [删除光标所在行] u [撤销]Ctrl-r [取消撤销] v [可视化选择]]]></content>
       <categories>
-        <category>编程技巧</category>
+        <category>技术</category>
+        <category>VIM</category>
       </categories>
+      <tags>
+        <tag>Vim</tag>
+        <tag>编程工具</tag>
+        <tag>编程技巧</tag>
+      </tags>
   </entry>
 </search>
