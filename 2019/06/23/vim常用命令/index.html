@@ -59,7 +59,7 @@
 </script>
 
   <meta name="description" content="平时常用的一些 VIM 命令。">
-<meta name="keywords" content="编程工具,编程技巧,Vim">
+<meta name="keywords" content="Vim,编程工具,编程技巧">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vim常用命令">
 <meta property="og:url" content="http://bdongs.com/2019/06/23/vim常用命令/index.html">
@@ -203,7 +203,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">3</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">4</span></a>
 
   </li>
       
@@ -339,6 +339,24 @@
           
 
           
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/06/23/vim常用命令/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/06/23/vim常用命令/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
 
         </div>
       </header>
@@ -387,11 +405,11 @@
           
           <div class="post-tags">
             
+              <a href="/tags/Vim/" rel="tag"><i class="fa fa-tags"></i> Vim</a>
+            
               <a href="/tags/编程工具/" rel="tag"><i class="fa fa-tags"></i> 编程工具</a>
             
               <a href="/tags/编程技巧/" rel="tag"><i class="fa fa-tags"></i> 编程技巧</a>
-            
-              <a href="/tags/Vim/" rel="tag"><i class="fa fa-tags"></i> Vim</a>
             
           </div>
         
@@ -428,7 +446,7 @@
           </div>
           
     
-    <div class="comments" id="gitalk-container"></div>
+    <div class="comments" id="comments"></div>
   
 
         </div>
@@ -460,7 +478,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -576,7 +594,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart-o"></i>
   </span>
@@ -585,13 +604,32 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">5k</span>
+    <span title="站点总字数">7k</span>
 </div>
 <div class="BbeiAn-info">
 <a target="_blank"  href="http://www.beian.miit.gov.cn/">蜀ICP备18038556号</a>
 </a>
 </div>
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
 
 
 
@@ -679,23 +717,29 @@
 
 
     
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
-    var gitalk = new Gitalk({
-      clientID: '58bcb8671b84acf6cf17',
-      clientSecret: '9c97c3d69651393e0cf83bb3fa9a2004cf167fe5',
-      repo: 'BlogComment',
-      owner: 'XTeddy',
-      admin: ['XTeddy'],
-      id: 'affde25b8d54eb20c86b322e18adcc22',
-        language: window.navigator.language || window.navigator.userLanguage,
-      
-      distractionFreeMode: 'true'
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', function() {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: false,
+    appId: 'giOL48VTNX1F6BlX6PvlBGxA-MdYXbMMI',
+    appKey: 'n9rvGWm6aXvLO0DPBMppVqEu',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
 </script>
 
   
