@@ -37,9 +37,9 @@
         <category>Markdown</category>
       </categories>
       <tags>
+        <tag>Markdown</tag>
         <tag>编程工具</tag>
         <tag>编程技巧</tag>
-        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -51,9 +51,9 @@
         <category>VIM</category>
       </categories>
       <tags>
-        <tag>Vim</tag>
         <tag>编程工具</tag>
         <tag>编程技巧</tag>
+        <tag>Vim</tag>
       </tags>
   </entry>
 </search>
