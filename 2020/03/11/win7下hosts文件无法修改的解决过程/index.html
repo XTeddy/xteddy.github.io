@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: true,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="Win7的hosts文件里出现[192.168.0.206 windows10.microdone.cn]，且无法修改、删除。">
+<meta name="keywords" content="系统,Windows7,解决方案">
+<meta property="og:type" content="article">
+<meta property="og:title" content="win7下hosts文件无法修改的解决过程">
+<meta property="og:url" content="http://bdongs.com/2020/03/11/win7下hosts文件无法修改的解决过程/index.html">
+<meta property="og:site_name" content="bdongs&#39; blog">
+<meta property="og:description" content="Win7的hosts文件里出现[192.168.0.206 windows10.microdone.cn]，且无法修改、删除。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-03-11T13:51:16.046Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="win7下hosts文件无法修改的解决过程">
+<meta name="twitter:description" content="Win7的hosts文件里出现[192.168.0.206 windows10.microdone.cn]，且无法修改、删除。">
+  <link rel="canonical" href="http://bdongs.com/2020/03/11/win7下hosts文件无法修改的解决过程/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>win7下hosts文件无法修改的解决过程 | bdongs' blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">bdongs' blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">书籍 | 运动</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">12</span></a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">12</span></a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">81</span></a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+  </div>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bdongs.com/2020/03/11/win7下hosts文件无法修改的解决过程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="bdongs">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/bdongs.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="bdongs' blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">win7下hosts文件无法修改的解决过程
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-03-11 20:33:34 / 修改时间：21:51:16" itemprop="dateCreated datePublished" datetime="2020-03-11T20:33:34+08:00">2020-03-11</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统问题/" itemprop="url" rel="index"><span itemprop="name">系统问题</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统问题/Windows7/" itemprop="url" rel="index"><span itemprop="name">Windows7</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统问题/Windows7/解决方案/" itemprop="url" rel="index"><span itemprop="name">解决方案</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/03/11/win7下hosts文件无法修改的解决过程/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/11/win7下hosts文件无法修改的解决过程/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Win7的hosts文件里出现[192.168.0.206 windows10.microdone.cn]，且无法修改、删除。</p>
+<a id="more"></a>
+
+<p>由于个人需求， 今天试着去修改一下hosts文件内容，进入C:\Windows\System32\drivers\etc，打开hosts文件，发现文件里有一行： </p>
+<p><code>192.168.0.206 windows10.microdone.cn</code> </p>
+<p>我一脸懵逼，想了下自己之前没添加过这行，我就访问了去掉子域window10后面的主域名，发现是个银行控件解决方案公司的官网，然后就试着在hosts里删除这行，保存退出。再次点开hosts文件一看，这一行又出现了。我首先想到是有恶意软件后台实时监测，监测到被删除，自动添加上去。试着再次删除，几次后直接给我隐藏了hosts文件，我又试着桌面创建一个文本文件，内容写入我想写的hosts内容，将后缀名去掉后保存。鼠标拖入hosts所在文件夹里，试图覆盖它，但提示我权限不足，无法操作。由于hosts被隐藏了，我是 Windows7，直接点开左上角： </p>
+<p><code>组织 → 文件夹和搜索选项 → 查看 → 隐藏受保护的操作系统文件(推荐)</code></p>
+<p>将前面的 √ 去掉，确定保存后出现了hosts文件。我这时更加怀疑有恶意软件在背后操纵。我右键点开hosts文件，发现文件属性被改为为只读，无法修改，明明刚才还能修改，更加证实了我的猜想。 </p>
+<p>我就尝试右键将hosts文件的属性点开，在<code>常规</code>选项里将<code>只读</code>前的√去掉，确定时又提示我权限不足，无法修改。我又点了<code>常规</code>旁的<code>安全</code>选项，发现只有Everyone用户有<code>读取和执行</code>权限，也不能修改，而且没有我本机登陆的用户，我也没有权限添加任何用户。</p>
+<p>我又用同样的方法，试着去修改hosts文件的母文件夹etc文件夹的权限，发现还是提示权限不足，无法修改。我并没有崩溃，这时我按照以往的习惯，试着重启按F8进入安全模式进行再次尝试，因为安全模式只启动系统核心进程，我想如果是恶意软件，应该不会后台启动。用上面同样的方式操作后，但最终还是提示无权限、无法修改。我点开任务管理器，也没发现奇怪的后台程序，这就怪了，我不崩溃的内心已经开始动摇了。  </p>
+<p>一直在想哪个软件在搞这些小动作，我一下想到是我的火绒杀毒，打开火绒扫描一波也正常，功能里发现有修改hosts选项，打开功能修改hosts，修改后无法保存，也提示权限不够，我猜想应该不是火绒，我越发觉得这不知名的东西有点恐怖了。  </p>
+<p>于是我就网上搜了一波，发现很多人都有这个域名出现在hosts里无法修改的问题，其中有说的是银联安全控件运行导致无法修改hosts，我就查看：<code>开始 → 控制面板 → 卸载程序</code> 里找相关控件，没有发现，只发现一个叫什么征信中心控件，我果断卸载。重启后再次尝试，得到同样的弹窗，我又进安全模式，上面的过程又重复试了一下，还是无果。 这时内心逐渐崩溃，只想把那一行给去掉，总觉得有问题。</p>
+<p>又在网上搜了一波，看到一个 Windows10 的同样问题的解决方案，说是 UWP 版的 Office 导致这个问题，卸载相关组件就行，原文：<a href="https://www.v2ex.com/t/611057" target="_blank" rel="noopener">还是关于 windows10.microdone.cn 的求助</a>。  </p>
+<p>按照相关说明，只需要删除相关组件或文件就行，我用 Everything 文件搜索软件搜索了含有[Microsoft.MicrosoftOfficeHub]文件名的文件，发现在<code>C:\WimMount</code>下有多个文件夹同名，我试着进去，发现无权访问。我又切换到 Administrator 用户[参照：<a href="https://jingyan.baidu.com/article/8cdccae940f621315413cd0f.html" target="_blank" rel="noopener">Win 7如何切换到管理员用户</a>]。登陆后又操作了一遍，点开[Microsoft.MicrosoftOfficeHub]所在文件夹，发现能访问该文件夹，这时内心窃喜。但当我选择删除的时候，却弹窗提示无权删除，我又打开火绒的文件粉碎功能，结果也是粉碎失败。   </p>
+<p>在崩溃的边缘，想了想：既然无法删除那一行，那就不删了，我只想添加一行进去，可是现在文件属性为<code>只读</code>。实在没办法，网上浏览了半天，意外发现到了微软论坛有一个人提的问题：<a href="https://answers.microsoft.com/zh-hans/windows/forum/all/win8%E4%BB%A5%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB/ba933353-e44c-4560-87dc-6bb17d61e070" target="_blank" rel="noopener">win8以管理员身份运行，仍无法修改hosts文件，内详</a>。就抱着好奇进去看看，看到楼主描述到了自己操作也被提示权限不足，我觉得和我遇到的问题有点像，就往下翻看到了下面的回答：  </p>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">尝试：</span><br><span class="line">在命令提示符执行：</span><br><span class="line"></span><br><span class="line">TAKEOWN /F "<span class="variable">%windir%</span><span class="symbol">\S</span>ystem32<span class="symbol">\d</span>rivers<span class="symbol">\e</span>tc" /A</span><br><span class="line">icacls "<span class="variable">%windir%</span><span class="symbol">\S</span>ystem32<span class="symbol">\d</span>rivers<span class="symbol">\e</span>tc" /grant "<span class="variable">%UserName%</span>":(F)</span><br><span class="line">TAKEOWN /F "<span class="variable">%windir%</span><span class="symbol">\S</span>ystem32<span class="symbol">\d</span>rivers<span class="symbol">\e</span>tc<span class="symbol">\H</span>OSTS" /A</span><br><span class="line">icacls "<span class="variable">%windir%</span><span class="symbol">\S</span>ystem32<span class="symbol">\d</span>rivers<span class="symbol">\e</span>tc<span class="symbol">\H</span>OSTS" /grant "<span class="variable">%UserName%</span>":(F)</span><br><span class="line"></span><br><span class="line">如果依然有命令显示“拒绝访问”则在命令提示符中执行：</span><br><span class="line"></span><br><span class="line">bcdedit /set &#123;default&#125; onetimeadvancedoptions yes</span><br><span class="line"></span><br><span class="line">重新启动计算机，并按照屏幕提示进入安全模式，在安全模式中启动命令提示符重新执行上面的命令。</span><br></pre></td></tr></table></figure>
+
+<p>我就抱着试一试的态度，没想到命令都执行成功了。我就打开hosts文件，发现我能修改了，删除那一行，保存后打开，不出现了。而且，hosts只读权限也能更改了。幸福来得太突然，最终完美解决了我折腾了半天的问题。  </p>
+<p><strong>总结：</strong> 根据命令执行结果看，应该只是etc文件夹的可修改权限交给了另一个组或成员，上面这几个命令就是将etc可修改权限换回本机用户，就这么简单。但是我还是不知道为啥刚开始能修改hosts文件内容，多修改几次后，变成无法修改了。不知道是系统安全策略所致，还是后台程序所致，反正我查了没发现异常程序。能正常修改hosts内容就行，我折腾半天终于解决了。再一次证明，多网上搜搜文章，总有相同或类似的文章能直接或间接解决自己遇到的问题，也能得到一些思路。同时也觉得自己挺傻逼的，折腾半天，结果几行命令就解决了。  </p>
+
+    </div>
+
+    
+    
+    
+      
+
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/系统/" rel="tag"><i class="fa fa-tags"></i> 系统</a>
+            
+              <a href="/tags/Windows7/" rel="tag"><i class="fa fa-tags"></i> Windows7</a>
+            
+              <a href="/tags/解决方案/" rel="tag"><i class="fa fa-tags"></i> 解决方案</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/03/10/新概念二考研基础词汇-6/" rel="next" title="新概念二考研基础词汇-6">
+                  <i class="fa fa-chevron-left"></i> 新概念二考研基础词汇-6
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="comments"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/bdongs.png"
+      alt="bdongs">
+  <p class="site-author-name" itemprop="name">bdongs</p>
+  <div class="site-description motion-element" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+  <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+    <div class="links-of-blogroll-title">
+      <i class="fa  fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://siriyxr.github.io" title="https://siriyxr.github.io" rel="noopener" target="_blank">SiriYang</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="https://zlwol.github.io/" title="https://zlwol.github.io/" rel="noopener" target="_blank">ZLW</a>
+        </li>
+      
+    </ul>
+  </div>
+
+        </div>
+      </div>
+<!-- Insert clustrmaps.com -->  
+<script type="text/javascript" id="clstr_globe" src="//cdn.clustrmaps.com/globe.js?d=5YMBlH-X6S07YqN7_Qx37BZ9zc7lubRmM46vPtfGdg0"></script>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">bdongs</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">177k</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+    
+    
+  
+  <script color='105,105,105' opacity='0.5' zIndex='-1' count='100' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script src="/lib/pangu/dist/pangu.min.js?v=4.0.7"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/affix.js?v=7.3.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.3.0"></script>
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+    
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', function() {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: false,
+    appId: 'f8AlbOjI5wVz5dRljDmDAaXm-gzGzoHsz',
+    appKey: 'jjkcAg6i94DH3oSqwfCcNoyT',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
+</script>
+
+  
+  
+
+  <script async src="/js/cursor/fireworks.js"></script>
+
+</body>
+</html>
